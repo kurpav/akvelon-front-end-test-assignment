@@ -1,0 +1,6 @@
+.user-list {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+}

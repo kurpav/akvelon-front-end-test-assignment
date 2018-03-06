@@ -1,0 +1,3 @@
+<div class="user-list">
+  <an-user-preview *ngFor="let user of users" [user]="user" (edit)="edit.emit($event)" (remove)="remove.emit($event)"></an-user-preview>
+</div>

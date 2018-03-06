@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>
+  {{editMode ? 'Update user' : 'Add user'}}
+</h2>
+<mat-dialog-content>
+    <form [formGroup]="form">
+        <mat-form-field class="full--width">
+            <input matInput placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field class="full--width">
+            <input matInput placeholder="Last name" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field class="full--width">
+            <input matInput placeholder="Title" formControlName="title">
+        </mat-form-field>
+        <mat-form-field class="full--width">
+            <textarea matInput placeholder="Bio" formControlName="bio"></textarea>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button
+    [mat-dialog-close]="form.value"
+    [disabled]="form.invalid"
+    color="primary">
+    <span>{{editMode ? 'Update' : 'Create'}}</span>
+  </button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/reset";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+[hidden] {
+  display: none !important;
+}
+
+.line--clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.text--ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

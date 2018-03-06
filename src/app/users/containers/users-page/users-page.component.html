@@ -1,0 +1,3 @@
+<an-user-list [users]="users$ | async" (remove)="onRemove($event)" (edit)="onEdit($event)"></an-user-list>
+<mat-spinner [hidden]="!(isLoading$ | async)"></mat-spinner>
+<button class="add-btn" mat-fab color="accent" type="button" (click)="addUser()">+</button>
